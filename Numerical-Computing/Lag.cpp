@@ -1,8 +1,4 @@
-﻿/*
-Hamza Eliraqy
-Numerical computing assignment 
 
-*/
 
 #include "Assign-NC.h"
 #include <stdio.h>
