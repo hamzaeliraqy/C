@@ -1,9 +1,4 @@
-/*
-Project: Final Project C++
-Course: C++ CST8219
-Student name: Hamza Eliraqy
-Student No: 040976448
-*/
+
 
 #include "FinalProject.h"
 #include <nana/push_ignore_diagnostic>
