@@ -1,17 +1,6 @@
-/*  File name: testScanner.c
- *  Purpose:This is the main program for Assignment #2 - Scanner
- *  CST8152 - Compilers
- *  Version: 1.21
- *  Authors: Svillen Ranev - Paulo Sousa
- *  Date: 24th September 2020
- */
 
 
- /* The #define _CRT_SECURE_NO_WARNINGS should be used in MS Visual Studio projects
-  * to suppress the warnings about using "unsafe" functions like fopen()
-  * and standard sting library functions defined in string.h.
-  * The define does not have any effect in other compiler projects.
-  */
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
