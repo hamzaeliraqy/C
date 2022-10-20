@@ -1,0 +1,42 @@
+﻿@model Lab4.Models.Community
+
+@{
+    ViewData["Title"] = "Select";
+
+}
+
+<h1>Select</h1>
+
+<div>
+    <h4>Members of this Community</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+
+        </dt>
+        <dd class="col-sm-10">
+
+            @foreach (var item in Model.CommunityMemberships)
+            {
+                <br>
+                @Html.DisplayFor(modelitem => item.Student.FullName);
+            }
+        </dd>
+        <dt class="col-sm-2">
+
+        </dt>
+        <dd class="col-sm-10">
+
+        </dd>
+        <dt class="col-sm-2">
+
+        </dt>
+        <dd class="col-sm-10">
+
+        </dd>
+    </dl>
+    <div>
+        
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>

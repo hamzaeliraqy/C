@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
+<a class="nav-link text-dark" asp-controller="Students" asp-action="Index">Students</a>
+<a class="nav-link text-dark" asp-controller="Communities" asp-action="Index">Communities</a>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

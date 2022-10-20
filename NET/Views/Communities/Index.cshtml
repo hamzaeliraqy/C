@@ -1,0 +1,77 @@
+﻿@model Lab4.Models.ViewModels.CommunityViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Budget
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Communities)
+        {
+            string selectedRow = "";
+            if (item.ID == ViewData["CommunityID"])
+            {
+                selectedRow = "succes";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Budget)
+                </td>
+                <td>
+                    <a asp-action="Select" asp-route-id="@item.ID">Select</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-controller ="Ads" asp-action="Create">Ads</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (Model.Students != null)
+{
+    <h3>
+        Members of the community:
+    </h3>
+    <table class="table">
+        <tr>
+            @if (Model.Students.Count() > 0)
+            {
+                <th> Name </th>
+            }
+            else
+            {
+                <th> No Student record exist </th>
+            }
+        </tr>
+        @foreach (var item in Model.Students)
+        {
+            <tr>
+                <td>
+                    @item.FullName
+                </td>
+            </tr>
+        }
+    </table>
+}

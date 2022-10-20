@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<Lab4.Models.Ads>
+
+@{ ViewData["Title"] = "Index"; }
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Upload New</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdsId)
+            </th>
+            <th>
+                Image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <img src="@Model => item.Url" style="max-width: 400px;" />
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.AdsId">Delete</a>
+                </td>
+            </tr>
+}
+    </tbody>
+</table>
