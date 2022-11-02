@@ -2,12 +2,6 @@
 * File name: buffer.c
 * Compiler: MS Visual Studio 2019
 * Author: Hamza Eliraqy
-* ID : 040976448
-* Course: CST 8152 – Compilers, Lab Section: 011
-* Assignment: A1.
-* Date: Feb 20 2021
-* Professor: Paulo Sousa / Abdulah
-* Purpose: This file is the main code for Buffer (A1)
 * Function list: bCreate, bAddCh, bClean, bFree, bIsFull, bGetAddChOffset, bGetSize, bGetMode, bGetMarkOffset
 bSetMarkOffset, bFinish, bDisplay, bLoad, bIsEmpty, bGetCh, bRewind, bRetract, bRestore, bGetChOffset, bGetIncrement, bGetCotent, bufferAddCPosition, bGetFlags.
 *************************************************************/
