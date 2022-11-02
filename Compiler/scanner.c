@@ -3,19 +3,11 @@
  * PURPOSE:
  *    Functions implementing a Lexical Analyzer (Scanner)
  *    as required for CST8152, Assignment #2
- *    The file is incomplete;
- *    Created by: Svillen Ranev - Paulo Sousa - Abdulah
- *    Version: 1.21
- *    Date: 1 Jan 2021
+ *  Author: Hamza Eliraqy
  *******************************************************************
  */
 
- /*************************************************************
- * COMPILERS COURSE - Algonquin College
- * Code version: 1.0
- * Author: Hamza Eliraqy
- * Student No: 040976448
- *************************************************************
+ 
 
  /* The #define _CRT_SECURE_NO_WARNINGS should be used in MS Visual Studio projects
   * to suppress the warnings about using "unsafe" functions like fopen()
@@ -122,7 +114,6 @@ Token tokenizer(void) {
 			-----------------------------------------------------------------------
 		*/
 
-		/* TODO_204: Token driven scanner implementation using switch */
 		switch (c) {
 			//comments
 		case '%':
@@ -340,12 +331,11 @@ Token tokenizer(void) {
 			-----------------------------------------------------------------------
 		*/
 
-		/* TODO_205: Transition driven scanner implementation inside default */
+	
 
 		default: // general case
 			if (isalpha(c) || isalnum(c) || c == '$') {
 				state = nextState(state, c);
-				// Continue the code...
 				lexStart = bGetChOffset(sourceBuffer);
 
 				int mark = bSetMarkOffset(sourceBuffer, lexStart);
@@ -505,7 +495,6 @@ int nextClass(char c) {
  *  - Suggestion: Use "strncpy" function.
  ************************************************************/
 
- /* TODO_209: Continue the code... */
 Token funcAVID(char* lexeme) {
 	Token currentToken = { 0 };
 
@@ -545,7 +534,6 @@ Token funcAVID(char* lexeme) {
  *  - Suggestion: Use "strncpy" function.
  ************************************************************/
 
- /* TODO_211: Continue the code... */
 Token funcSVID(char* lexeme) {
 	Token currentToken = { 0 };
 
@@ -584,7 +572,6 @@ Token funcSVID(char* lexeme) {
  *   additional three dots (...) should be put in the output.
  ************************************************************/
 
- /* TODO_213: Continue the code... */
 Token funcIL(char* lexeme) {
 	Token currentToken = { 0 };
 
@@ -633,7 +620,6 @@ Token funcIL(char* lexeme) {
  *   additional three dots (...) should be put in the output.
  ************************************************************/
 
- /* TODO_215: Continue the code... */
 Token funcFPL(char* lexeme) {
 	Token currentToken = { 0 };
 	/*
@@ -682,7 +668,7 @@ Token funcFPL(char* lexeme) {
  *   separate the lexemes. Remember also to incremente the line.
  ************************************************************/
 
- /* TODO_217: Continue the code... */
+
 Token funcSL(char* lexeme) {
 	/*Token currentToken = { 0 };
 
@@ -734,7 +720,6 @@ Token funcSL(char* lexeme) {
  *   so remember to increment line.
  ************************************************************/
 
- /* TODO_219: Continue the code... */
 Token funcErr(char* lexeme) {
 	Token currentToken = { 0 };
 
@@ -763,9 +748,8 @@ Token funcErr(char* lexeme) {
 **************************************************************/
 /*************************************************************
  * This function checks if one specific lexeme is a keyword.
- * - Tip: Remember to use the keywordTable to check the keywords.
  ************************************************************/
- /* TODO_221: Continue the code... */
+
 
 int isKeyword(char* lexeme) {
 	int i = -1;
@@ -782,6 +766,3 @@ int isKeyword(char* lexeme) {
 }
 
 
-/*
-TODO_222: (If necessary): HERE YOU WRITE YOUR ADDITIONAL FUNCTIONS (IF ANY).
-*/
