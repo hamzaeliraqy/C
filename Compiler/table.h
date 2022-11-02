@@ -1,18 +1,8 @@
 /****************************************************
  * Filename: table.h
+ * Author: Hamza Eliraqy
  * Transition Table and function declarations necessary
 	for the scanner implementation
- * as required for CST8152 - Assignment #2.
- * Version: 1.21
- * Date: 24 Sep 2020
- * Created by: Svillen Ranev - Updated by: Paulo Sousa
- * 2DO: The file is incomplete. You are to complete it.
-
- /*************************************************************
- * COMPILERS COURSE - Algonquin College
- * Code version: 1.0
- * Author: Hamza Eliraqy
- * Student No: 040976448
  **************************************************************/
 
 
@@ -40,7 +30,6 @@
 
 
 
-  /* TODO_102: EOF definitions */
 #define CHARSEOF0 '\0'  
 #define CHARSEOF255 255 
 
@@ -52,7 +41,7 @@
  *  .AND., .OR. , .NOT., SEOF,
  */
 
- /* TODO_103: Error states and illegal state */
+
 #define ES  2		/* Error state  with no retract */
 #define ER  5		/* Error state  with retract */
 #define IS  7		/* Illegal state */
@@ -63,7 +52,6 @@
 #define TABLE_COLUMNS 8
 
 /* Transition table - type of states defined in separate table */
-/* TODO_104: Define Transition table missing values */
 int  transitionTable[][TABLE_COLUMNS] = {
 	/*				[A-z],		[0-9],		.,			$,			",			SEOF,		other	*/
 	/*				L(0),		D(1),		P(2),		S(3),		Q(4),		E(5),		O(6)	*/
@@ -85,13 +73,11 @@ int  transitionTable[][TABLE_COLUMNS] = {
 
 
 /* Accepting state table definition */
-/* TODO_105: Define accepting states types */
 #define ASWR 1	/* accepting state with retract */
 #define ASNR 0	/* accepting state with no retract */
 #define NOAS 3	/* not accepting state */
 
 /* List of acceptable states */
-/* TODO_106: Define list of acceptable states */
 int stateType[] = {
 	NOAS, 		/* 00 */
 	NOAS, 		/* 01 */
@@ -108,7 +94,7 @@ int stateType[] = {
 	ASWR  		/* 12 */
 };
 
-/* TODO_107: Declare accepting states functions */
+
 /* Accepting action function declarations */
 
 /* Defining a new type: pointer to function (of one char * argument)
@@ -123,10 +109,8 @@ Token funcFPL(char* lexeme);	//FPL
 Token funcSL(char* lexeme);		//SL
 Token funcErr(char* lexeme);	//ES
 /* Accepting function (action) callback table (array) definition */
-/* If you do not want to use the typedef, the equvalent declaration is:
- * Token (*finalStateTable[])(char lexeme[]) = {
- */
- /* TODO_108: Define final state table */
+
+
 PTR_ACCFUN finalStateTable[] = {
 	NULL,				/* 00 */
 	NULL,				/* 01 */
@@ -143,12 +127,12 @@ PTR_ACCFUN finalStateTable[] = {
 	funcErr,			/* 12 */
 };
 
-/* TODO_09: Define the number of Keywords from the language */
+
 /* Keyword lookup table (.AND., .OR. and .NOT. are not keywords) */
 #define KWT_SIZE 10
 
 /* Keyword list */
-/* TODO_10: Define the list of keywords */
+
 char* keywordTable[] = {
 	"MAIN",
 	"IF",
