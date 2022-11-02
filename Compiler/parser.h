@@ -1,24 +1,11 @@
+
 /*************************************************************
-* COMPILERS COURSE - Algonquin College
-* Code version: Winter, 2021
-*************************************************************
 * File name: parser.h
 * Compiler: MS Visual Studio 2019
-* Author: Svillen Ranev - Paulo Sousa - Abdulah
-* Course: CST 8152 – Compilers, Lab Section: [011, 012, 013, or 014]
-* Assignment: A3.
-* Date: Sep 01 2020
+* Author: Hamza Eliraqy
 * Purpose: This file is the main header for Parser (.h)
-* Function list: (...).
 *************************************************************/
-/*************************************************************
- * COMPILERS COURSE - Algonquin College
- * Code version: 1.0
- * Author: Hamza Eliraqy
- * Student No: 040976448
- *************************************************************
 
-/* TODO_101: Adjust the function header */
 
 /* Inclusion section */
 #include <stdio.h>
@@ -36,10 +23,8 @@ extern int line;
 extern Token tokenizer();
 extern char* keywordTable[];
 
-/* Mock code: remove this UNKNOWN when variables defined */
-//#define UNKNOWN 0
 
-/* TODO_102: Create ALL constants for keywords (sequence given in table.h) */
+
 /* Constants */
 #define	NO_ATTR	-1
 #define MAIN 	0
@@ -52,7 +37,7 @@ extern char* keywordTable[];
 #define WRITE	7
 #define TRUE	8
 #define FALSE	9
-// Continue the code
+
 
 /* Function definitions */
 void startParser(void);
@@ -61,12 +46,11 @@ void syncErrorHandler(int);
 void printError();
 //void printMessage(char*);
 
-/* TODO_103: Place ALL non-terminal function declarations */
+/* Non-terminal function declarations */
 void program(void);
 void optionalStatements(void);
 void statements(void);
 void variableList(void);
-// Continue the code
 void additiveArithmeticExpression(void);
 void additiveArithmeticExpressionPrime(void);
 void arithmeticExpression(void);
