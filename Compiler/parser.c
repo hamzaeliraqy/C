@@ -1,22 +1,8 @@
-/*************************************************************
-* COMPILERS COURSE - Algonquin College
-* Code version: Winter, 2021
-*************************************************************
-* File name: parser.h
+/**************************************************************
+* File name: parser.c
 * Compiler: MS Visual Studio 2019
-* Author: Svillen Ranev - Paulo Sousa - Abdulah
-* Course: CST 8152 – Compilers, Lab Section: [011, 012, 013, or 014]
-* Assignment: A3.
-* Date: Jan 01 2021
-* Purpose: This file is the main header for Parser (.h)
-* Function list: (...).
+* Author: Hamza Eliraqy
 *************************************************************/
-/*************************************************************
- * COMPILERS COURSE - Algonquin College
- * Code version: 1.0
- * Author: Hamza Eliraqy
- * Student No: 040976448
- *************************************************************/
 
 
 
@@ -37,7 +23,6 @@ void startParser(void) {
 /*************************************************************
  * Match Token
  ************************************************************/
- /* TODO_202: Continue the development */
 void matchToken(int tokenCode, int tokenAttribute) {
 	int matchFlag = 1;
 	switch (lookahead.code) {
@@ -66,7 +51,6 @@ void matchToken(int tokenCode, int tokenAttribute) {
 	}
 
 
-	// Continue the code 
 }
 
 /*************************************************************
@@ -172,9 +156,7 @@ void program(void) {
 	printf("%s\n", "PLATY: Program parsed");
 }
 
-/* TODO_205: Continue the development (all non-terminal functions) */
 
-/* Example 1 */
 /*************************************************************
  * Optional statement
  * <opt_statements> -> <statements> | ϵ
@@ -202,7 +184,7 @@ void optionalStatements(void) {
 	printf("%s\n", "PLATY: Optional statements parsed");
 }
 
-/* Example 2 */
+
 /*************************************************************
  * Input Statement
  * <input statement> -> READ (<variable list>);
@@ -217,7 +199,7 @@ void inputStatement(void) {
 	printf("%s\n", "PLATY: Input statement parsed");
 }
 
-/* TODO: Continue all functions */
+
 
 /*************************************************************
  * Statements
@@ -227,7 +209,7 @@ void inputStatement(void) {
  *FIRST(<statement>) = {AVID_T, SVID_T, KW_T(IF), KW_T(WHILE), KW_T(READ), KW_T(WRITE)}
  ************************************************************/
 void statements(void) {
-	// TODO
+	
 	statement();
 	statementsPrime();
 	printf("PLATY: Statements parsed\n");
