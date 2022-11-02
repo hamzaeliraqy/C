@@ -1,5 +1,5 @@
 /*************************************************************
-* File name: buffer.c
+* File name: buffer.f
 * Compiler: MS Visual Studio 2019
 * Author: Hamza Eliraqy
 */
