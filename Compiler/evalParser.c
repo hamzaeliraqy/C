@@ -1,20 +1,8 @@
-/*************************************************************
- * File name: platy.c
- * Purpose:This is the main program for Assignment#3 - Platypus Parser
- *  CST8152 - Compilers
- *  Version: 2.01
- *  Author: Svillen Ranev - Paulo Sousa - Abdulah
- *  Date: 1st Dec 2021
- *************************************************************/
-
-
- /*************************************************************
-  * IMPORTANT NOTE:
-  * The #define _CRT_SECURE_NO_WARNINGS should be used in MS Visual Studio projects
-  * to suppress the warnings about using "unsafe" functions like fopen()
-  * and standard sting library functions defined in string.h.
-  * The define does not have any effect in other compilers  projects.
-  **********************************************************/
+/**************************************************************
+* File name: buffer.c
+* Compiler: MS Visual Studio 2019
+* Author: Hamza Eliraqy
+*************************************************************/
 
 #define _CRT_SECURE_NO_WARNINGS
 
